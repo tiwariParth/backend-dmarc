@@ -1,0 +1,53 @@
+{
+  "name": "bluefox.email-free-tools-api",
+  "version": "1.0.0",
+  "description": "Email Authentication Suite API",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "lint": "npx standard",
+    "lint-fix": "npx standard --fix",
+    "test": "npx vitest run --coverage -- --check-coverage --lines 100 --functions 100 --branches 100 --statements 100",
+    "serve": "cd src; node --require dotenv/config index.js dotenv_config_path=../.env",
+    "serve:dev": "cd src && nodemon --require dotenv/config index.js dotenv_config_path=../.env"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gyulanemeth/bluefox.email-free-tools-api.git"
+  },
+  "keywords": [
+    "email",
+    "authentication",
+    "dmarc",
+    "spf",
+    "dkim",
+    "mx",
+    "dns",
+    "security",
+    "email-security",
+    "mailauth",
+    "express-async-api",
+    "bluefox"
+  ],
+  "author": "Bluefox.email",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gyulanemeth/bluefox.email-free-tools-api/issues"
+  },
+  "homepage": "https://github.com/gyulanemeth/bluefox.email-free-tools-api#readme",
+  "dependencies": {
+    "dotenv": "^17.2.0",
+    "express-async-api": "^0.8.1",
+    "jsonwebtoken": "^9.0.2",
+    "mailauth": "^4.8.6",
+    "nodemon": "^3.1.10",
+    "pino": "^9.4.0",
+    "pino-http": "^10.3.0",
+    "svg-captcha": "^1.4.0"
+  },
+  "devDependencies": {
+    "@vitest/coverage-c8": "^0.28.2",
+    "standard": "^17.0.0",
+    "vitest": "^0.28.2"
+  }
+}
